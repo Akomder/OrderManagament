@@ -1,0 +1,103 @@
+@model IEnumerable<OrderManagementWeb.Models.Order>
+
+@{
+    ViewBag.Title = "Orders";
+}
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <h2><i class="fas fa-file-invoice"></i> Orders</h2>
+    </div>
+    <div class="col-md-6 text-end">
+        <a href="@Url.Action("Create")" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Create New Order
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <form method="get" class="row g-3 mb-3">
+            <div class="col-md-3">
+                <input type="text" name="searchString" class="form-control" placeholder="Search order number..." value="@Request.QueryString["searchString"]" />
+            </div>
+            <div class="col-md-2">
+                <input type="date" name="fromDate" class="form-control" value="@Request.QueryString["fromDate"]" />
+            </div>
+            <div class="col-md-2">
+                <input type="date" name="toDate" class="form-control" value="@Request.QueryString["toDate"]" />
+            </div>
+            <div class="col-md-2">
+                @Html.DropDownList("agentId", ViewBag.Agents as SelectList, "All Agents", new { @class = "form-select" })
+            </div>
+            <div class="col-md-2">
+                @Html.DropDownList("status", ViewBag.Statuses as SelectList, "All Status", new { @class = "form-select" })
+            </div>
+            <div class="col-md-1">
+                <button type="submit" class="btn btn-secondary w-100">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Order Number</th>
+                        <th>Order Date</th>
+                        <th>Agent Name</th>
+                        <th>Total Amount</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.OrderNumber</td>
+                                <td>@item.OrderDate.ToString("yyyy-MM-dd")</td>
+                                <td>@item.Agent.AgentName</td>
+                                <td>@item.TotalAmount.ToString("C0")</td>
+                                <td>
+                                    @switch (item.Status)
+                                    {
+                                        case "Pending":
+                                            <span class="badge bg-warning">Pending</span>
+                                            break;
+                                        case "Processing":
+                                            <span class="badge bg-info">Processing</span>
+                                            break;
+                                        case "Completed":
+                                            <span class="badge bg-success">Completed</span>
+                                            break;
+                                        case "Cancelled":
+                                            <span class="badge bg-danger">Cancelled</span>
+                                            break;
+                                    }
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("Edit", new { id = item.OrderId })" class="btn btn-sm btn-warning">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+                                    <a href="@Url.Action("Print", new { id = item.OrderId })" class="btn btn-sm btn-info" target="_blank">
+                                        <i class="fas fa-print"></i> Print
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center">No orders found.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

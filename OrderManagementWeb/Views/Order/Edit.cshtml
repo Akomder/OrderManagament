@@ -1,0 +1,239 @@
+@model OrderManagementWeb.Models.ViewModels.OrderViewModel
+
+@{
+    ViewBag.Title = "Edit Order";
+}
+
+<div class="row">
+    <div class="col-12">
+        <h2><i class="fas fa-edit"></i> Edit Order</h2>
+        <hr />
+
+        @using (Html.BeginForm("Edit", "Order", FormMethod.Post, new { @class = "needs-validation", id = "orderForm" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+            @Html.HiddenFor(m => m.OrderId)
+
+            <div class="card mb-3">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-info-circle"></i> Order Information</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                @Html.LabelFor(m => m.OrderNumber, new { @class = "form-label" })
+                                @Html.TextBoxFor(m => m.OrderNumber, new { @class = "form-control", @readonly = "readonly" })
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                @Html.LabelFor(m => m.OrderDate, new { @class = "form-label" })
+                                @Html.TextBoxFor(m => m.OrderDate, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                                @Html.ValidationMessageFor(m => m.OrderDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                @Html.LabelFor(m => m.Status, new { @class = "form-label" })
+                                @Html.DropDownListFor(m => m.Status, ViewBag.Statuses as SelectList, new { @class = "form-select" })
+                                @Html.ValidationMessageFor(m => m.Status, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                @Html.LabelFor(m => m.AgentId, new { @class = "form-label" })
+                                @Html.DropDownListFor(m => m.AgentId, ViewBag.Agents as SelectList, "-- Select Agent --", new { @class = "form-select" })
+                                @Html.ValidationMessageFor(m => m.AgentId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0"><i class="fas fa-list"></i> Order Details</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="orderDetailsTable">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th width="40%">Product</th>
+                                    <th width="15%">Quantity</th>
+                                    <th width="20%">Unit Price</th>
+                                    <th width="20%">Line Total</th>
+                                    <th width="5%">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="orderDetailsBody">
+                                @for (int i = 0; i < Model.OrderDetails.Count; i++)
+                                {
+                                    <tr class="order-detail-row">
+                                        <td>
+                                            <select name="OrderDetails[@i].ProductId" class="form-select product-select" data-index="@i">
+                                                <option value="">-- Select Product --</option>
+                                                @foreach (var product in ViewBag.Products as SelectList)
+                                                {
+                                                    <option value="@product.Value" @(product.Value == Model.OrderDetails[i].ProductId.ToString() ? "selected" : "")>@product.Text</option>
+                                                }
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="number" name="OrderDetails[@i].Quantity" class="form-control quantity-input" min="1" value="@Model.OrderDetails[i].Quantity" data-index="@i" />
+                                        </td>
+                                        <td>
+                                            <input type="number" name="OrderDetails[@i].UnitPrice" class="form-control unit-price" readonly value="@Model.OrderDetails[i].UnitPrice" data-index="@i" />
+                                        </td>
+                                        <td>
+                                            <input type="number" name="OrderDetails[@i].TotalPrice" class="form-control line-total" readonly value="@Model.OrderDetails[i].TotalPrice" data-index="@i" />
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm btn-danger remove-row">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <button type="button" class="btn btn-success" id="addRowBtn">
+                        <i class="fas fa-plus"></i> Add New Item
+                    </button>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0"><i class="fas fa-calculator"></i> Order Summary</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 offset-md-6">
+                            <table class="table">
+                                <tr>
+                                    <td class="text-end"><strong>Total Amount:</strong></td>
+                                    <td class="text-end">
+                                        <h4 id="totalAmount">@Model.TotalAmount.ToString("N2")</h4>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-end">
+                <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="fas fa-save"></i> Update Order
+                </button>
+                <a href="@Url.Action("Index")" class="btn btn-secondary btn-lg">
+                    <i class="fas fa-times"></i> Cancel
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        var rowIndex = @Model.OrderDetails.Count;
+
+        $(document).ready(function () {
+            calculateTotal();
+
+            // Add new row
+            $('#addRowBtn').click(function () {
+                var newRow = `
+                    <tr class="order-detail-row">
+                        <td>
+                            <select name="OrderDetails[${rowIndex}].ProductId" class="form-select product-select" data-index="${rowIndex}">
+                                <option value="">-- Select Product --</option>
+                                ${getProductOptions()}
+                            </select>
+                        </td>
+                        <td>
+                            <input type="number" name="OrderDetails[${rowIndex}].Quantity" class="form-control quantity-input" min="1" value="1" data-index="${rowIndex}" />
+                        </td>
+                        <td>
+                            <input type="number" name="OrderDetails[${rowIndex}].UnitPrice" class="form-control unit-price" readonly data-index="${rowIndex}" />
+                        </td>
+                        <td>
+                            <input type="number" name="OrderDetails[${rowIndex}].TotalPrice" class="form-control line-total" readonly data-index="${rowIndex}" />
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-danger remove-row">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+                $('#orderDetailsBody').append(newRow);
+                rowIndex++;
+            });
+
+            function getProductOptions() {
+                var options = '';
+                @foreach (var product in ViewBag.Products as SelectList)
+                {
+                    @:options += '<option value="@product.Value">@product.Text</option>';
+                }
+                return options;
+            }
+
+            // Remove row
+            $(document).on('click', '.remove-row', function () {
+                if ($('.order-detail-row').length > 1) {
+                    $(this).closest('tr').remove();
+                    calculateTotal();
+                } else {
+                    alert('At least one order item is required.');
+                }
+            });
+
+            // Product selection change
+            $(document).on('change', '.product-select', function () {
+                var productId = $(this).val();
+                var index = $(this).data('index');
+                
+                if (productId) {
+                    $.get('@Url.Action("GetProductPrice", "Order")', { productId: productId }, function (data) {
+                        $(`input[name="OrderDetails[${index}].UnitPrice"]`).val(data.price);
+                        calculateLineTotal(index);
+                    });
+                } else {
+                    $(`input[name="OrderDetails[${index}].UnitPrice"]`).val('');
+                    $(`input[name="OrderDetails[${index}].TotalPrice"]`).val('');
+                    calculateTotal();
+                }
+            });
+
+            // Quantity change
+            $(document).on('input', '.quantity-input', function () {
+                var index = $(this).data('index');
+                calculateLineTotal(index);
+            });
+
+            function calculateLineTotal(index) {
+                var quantity = parseFloat($(`input[name="OrderDetails[${index}].Quantity"]`).val()) || 0;
+                var unitPrice = parseFloat($(`input[name="OrderDetails[${index}].UnitPrice"]`).val()) || 0;
+                var lineTotal = quantity * unitPrice;
+                $(`input[name="OrderDetails[${index}].TotalPrice"]`).val(lineTotal.toFixed(2));
+                calculateTotal();
+            }
+
+            function calculateTotal() {
+                var total = 0;
+                $('.line-total').each(function () {
+                    total += parseFloat($(this).val()) || 0;
+                });
+                $('#totalAmount').text(total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+            }
+        });
+    </script>
+}

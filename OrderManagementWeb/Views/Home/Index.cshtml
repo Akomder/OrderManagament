@@ -1,0 +1,139 @@
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<div class="row">
+    <div class="col-12">
+        <h2>
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+        </h2>
+        <hr />
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="alert alert-info">
+            <h4><i class="fas fa-user-circle"></i> Welcome, @ViewBag.FullName!</h4>
+            <p class="mb-0">You are logged in as <strong>@ViewBag.Username</strong></p>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-6 col-lg-3">
+        <div class="card text-white bg-primary h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="card-title">Products</h5>
+                        <p class="card-text">Manage product catalog</p>
+                    </div>
+                    <i class="fas fa-box fa-3x opacity-50"></i>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("Index", "Product")" class="text-white text-decoration-none">
+                    View Products <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="card text-white bg-success h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="card-title">Agents</h5>
+                        <p class="card-text">Manage agents/customers</p>
+                    </div>
+                    <i class="fas fa-users fa-3x opacity-50"></i>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("Index", "Agent")" class="text-white text-decoration-none">
+                    View Agents <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="card text-white bg-warning h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="card-title">Orders</h5>
+                        <p class="card-text">Manage orders</p>
+                    </div>
+                    <i class="fas fa-file-invoice fa-3x opacity-50"></i>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("Index", "Order")" class="text-white text-decoration-none">
+                    View Orders <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="card text-white bg-info h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="card-title">Reports</h5>
+                        <p class="card-text">View analytics & reports</p>
+                    </div>
+                    <i class="fas fa-chart-bar fa-3x opacity-50"></i>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("BestSellingItems", "Report")" class="text-white text-decoration-none">
+                    View Reports <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0"><i class="fas fa-rocket"></i> Quick Actions</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="@Url.Action("Create", "Order")" class="list-group-item list-group-item-action">
+                    <i class="fas fa-plus-circle text-primary"></i> Create New Order
+                </a>
+                <a href="@Url.Action("Create", "Product")" class="list-group-item list-group-item-action">
+                    <i class="fas fa-plus-circle text-success"></i> Add New Product
+                </a>
+                <a href="@Url.Action("Create", "Agent")" class="list-group-item list-group-item-action">
+                    <i class="fas fa-plus-circle text-warning"></i> Add New Agent
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0"><i class="fas fa-chart-line"></i> Reports & Analytics</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="@Url.Action("BestSellingItems", "Report")" class="list-group-item list-group-item-action">
+                    <i class="fas fa-trophy text-warning"></i> Best Selling Items
+                </a>
+                <a href="@Url.Action("CustomerPurchases", "Report")" class="list-group-item list-group-item-action">
+                    <i class="fas fa-shopping-bag text-info"></i> Customer Purchases
+                </a>
+                <a href="@Url.Action("PurchaseSummary", "Report")" class="list-group-item list-group-item-action">
+                    <i class="fas fa-chart-pie text-success"></i> Purchase Summary
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

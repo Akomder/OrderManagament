@@ -1,0 +1,159 @@
+@model OrderManagementWeb.Models.Order
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order @Model.OrderNumber</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @@media print {
+            .no-print {
+                display: none;
+            }
+            body {
+                padding: 20px;
+            }
+        }
+        .invoice-header {
+            border-bottom: 3px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .invoice-details {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="invoice-header">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>ORDER MANAGEMENT SYSTEM</h1>
+                    <p class="lead">Order Invoice</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <h2>ORDER #@Model.OrderNumber</h2>
+                    <p>Date: @Model.OrderDate.ToString("MMMM dd, yyyy")</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="invoice-details">
+                    <h5>Agent Information:</h5>
+                    <p class="mb-1"><strong>Name:</strong> @Model.Agent.AgentName</p>
+                    <p class="mb-1"><strong>Code:</strong> @Model.Agent.AgentCode</p>
+                    @if (!string.IsNullOrEmpty(Model.Agent.Email))
+                    {
+                        <p class="mb-1"><strong>Email:</strong> @Model.Agent.Email</p>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.Agent.Phone))
+                    {
+                        <p class="mb-1"><strong>Phone:</strong> @Model.Agent.Phone</p>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.Agent.Address))
+                    {
+                        <p class="mb-0"><strong>Address:</strong> @Model.Agent.Address</p>
+                    }
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="invoice-details">
+                    <h5>Order Status:</h5>
+                    <p class="mb-1"><strong>Status:</strong> 
+                        @switch (Model.Status)
+                        {
+                            case "Pending":
+                                <span class="badge bg-warning">Pending</span>
+                                break;
+                            case "Processing":
+                                <span class="badge bg-info">Processing</span>
+                                break;
+                            case "Completed":
+                                <span class="badge bg-success">Completed</span>
+                                break;
+                            case "Cancelled":
+                                <span class="badge bg-danger">Cancelled</span>
+                                break;
+                        }
+                    </p>
+                    <p class="mb-0"><strong>Created:</strong> @Model.CreatedDate.ToString("MMMM dd, yyyy")</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive mb-4">
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Product Name</th>
+                        <th>Product Code</th>
+                        <th class="text-center">Quantity</th>
+                        <th class="text-end">Unit Price</th>
+                        <th class="text-end">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int itemNumber = 1;
+                    }
+                    @foreach (var detail in Model.OrderDetails)
+                    {
+                        <tr>
+                            <td>@itemNumber</td>
+                            <td>@detail.Product.ProductName</td>
+                            <td>@detail.Product.ProductCode</td>
+                            <td class="text-center">@detail.Quantity</td>
+                            <td class="text-end">@detail.UnitPrice.ToString("C0")</td>
+                            <td class="text-end">@detail.TotalPrice.ToString("C0")</td>
+                        </tr>
+                        itemNumber++;
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="text-end"><strong>GRAND TOTAL:</strong></td>
+                        <td class="text-end"><strong>@Model.TotalAmount.ToString("C0")</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="border-top pt-3">
+                    <p class="text-center mb-0">Prepared By</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="border-top pt-3">
+                    <p class="text-center mb-0">Received By</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5 no-print">
+            <button onclick="window.print()" class="btn btn-primary btn-lg me-2">
+                <i class="fas fa-print"></i> Print
+            </button>
+            <button onclick="window.close()" class="btn btn-secondary btn-lg">
+                <i class="fas fa-times"></i> Close
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</body>
+</html>
