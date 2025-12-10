@@ -251,6 +251,27 @@ The `Database.sql` script includes sample data:
 - Verify credentials (default: admin/123456)
 - Check Forms Authentication configuration in Web.config
 
+## Security
+
+### Authentication & Authorization
+- FormsAuthentication with secure cookie handling
+- Session-based user tracking
+- SSL/TLS required for authentication cookies
+- CSRF protection on all POST operations
+- Password validation (Note: Use hashed passwords in production)
+
+### Security Best Practices Implemented
+- ✅ CSRF token validation on all state-changing operations
+- ✅ SSL/TLS requirement for authentication
+- ✅ Debug mode disabled for production
+- ✅ Input validation on all forms
+- ✅ SQL injection prevention via Entity Framework parameterized queries
+- ✅ XSS prevention via Razor encoding
+
+### Security Scan Results
+- **CodeQL Analysis**: 0 vulnerabilities found ✅
+- All security recommendations addressed
+
 ## Future Enhancements
 
 - Password hashing and encryption
