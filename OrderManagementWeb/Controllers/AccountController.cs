@@ -7,18 +7,28 @@ using OrderManagementWeb.Models.ViewModels;
 
 namespace OrderManagementWeb.Controllers
 {
+    /// <summary>
+    /// Handles user authentication and authorization
+    /// </summary>
     public class AccountController : Controller
     {
         private OrderManagementContext db = new OrderManagementContext();
 
-        // GET: Account/Login
+        /// <summary>
+        /// Displays the login page
+        /// </summary>
         [AllowAnonymous]
         public ActionResult Login()
         {
             return View();
         }
 
-        // POST: Account/Login
+        /// <summary>
+        /// Processes login form submission
+        /// NOTE: In production, passwords should be hashed using a secure algorithm (e.g., BCrypt, PBKDF2)
+        /// This implementation uses plain text for demonstration purposes only
+        /// </summary>
+        /// <param name="model">Login credentials</param>
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -26,6 +36,8 @@ namespace OrderManagementWeb.Controllers
         {
             if (ModelState.IsValid)
             {
+                // SECURITY WARNING: This uses plain text password comparison
+                // In production, use: BCrypt.Verify(model.Password, user.PasswordHash)
                 var user = db.Users.FirstOrDefault(u => u.Username == model.Username && u.Password == model.Password);
                 
                 if (user != null)
@@ -45,7 +57,9 @@ namespace OrderManagementWeb.Controllers
             return View(model);
         }
 
-        // GET: Account/Logout
+        /// <summary>
+        /// Logs out the current user
+        /// </summary>
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();

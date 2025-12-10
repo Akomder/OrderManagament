@@ -11,7 +11,22 @@ namespace OrderManagementWeb
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+        }
+
+        protected void Application_Error()
+        {
+            var exception = Server.GetLastError();
+            
+            // Log the error (in production, use a proper logging framework)
+            System.Diagnostics.Debug.WriteLine($"Error: {exception?.Message}");
+            
+            // Clear the error
+            Server.ClearError();
+            
+            // Redirect to error page
+            Response.Redirect("~/Home/Index");
         }
     }
 }

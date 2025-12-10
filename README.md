@@ -79,7 +79,7 @@ The system uses the following tables:
 1. **Clone the Repository**
    ```bash
    git clone <repository-url>
-   cd OrderManagament
+   cd OrderManagement
    ```
 
 2. **Database Setup**
@@ -120,7 +120,7 @@ The system uses the following tables:
 ## Project Structure
 
 ```
-OrderManagamentWeb/
+OrderManagementWeb/
 ├── App_Start/
 │   └── RouteConfig.cs          # MVC routing configuration
 ├── Controllers/
