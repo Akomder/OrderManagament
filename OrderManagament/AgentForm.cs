@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using BLL;
@@ -48,6 +48,11 @@ namespace WinFormUI
         {
             txtName.Text = dgvAgents.CurrentRow.Cells["AgentName"].Value.ToString();
             txtAddress.Text = dgvAgents.CurrentRow.Cells["Address"].Value.ToString();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void AgentForm_FormClosing(object sender, FormClosingEventArgs e)

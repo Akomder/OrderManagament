@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using BLL;
 
@@ -51,6 +51,11 @@ namespace WinFormUI
             bll.DeleteDetail(id);
 
             LoadDetails();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void OrderDetailForm_FormClosing(object sender, FormClosingEventArgs e)

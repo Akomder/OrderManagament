@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using BLL;
@@ -49,6 +49,11 @@ namespace WinFormUI
             txtName.Text = dgvItems.CurrentRow.Cells["ItemName"].Value.ToString();
             txtSize.Text = dgvItems.CurrentRow.Cells["Size"].Value.ToString();
             txtPrice.Text = dgvItems.CurrentRow.Cells["UnitPrice"].Value.ToString();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void ItemForm_FormClosing(object sender, FormClosingEventArgs e)

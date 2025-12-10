@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using BLL;
 
@@ -48,6 +48,11 @@ namespace WinFormUI
         {
             int oid = Convert.ToInt32(dgvOrders.CurrentRow.Cells["OrderID"].Value);
             new OrderDetailForm(oid).ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void OrderForm_FormClosing(object sender, FormClosingEventArgs e)
