@@ -1,0 +1,45 @@
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\bin\Debug\BLL.dll.config
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\bin\Debug\BLL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\bin\Debug\BLL.pdb
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\bin\Debug\DAL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\bin\Debug\EntityFramework.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\bin\Debug\DAL.pdb
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\bin\Debug\DAL.dll.config
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\bin\Debug\EntityFramework.xml
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\obj\Debug\BLL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\BLL\obj\Debug\BLL.pdb
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\bin\Debug\BLL.dll.config
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\bin\Debug\BLL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\bin\Debug\BLL.pdb
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\bin\Debug\DAL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\bin\Debug\EntityFramework.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\bin\Debug\DAL.pdb
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\bin\Debug\DAL.dll.config
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\bin\Debug\EntityFramework.xml
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\obj\Debug\BLL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\BLL\obj\Debug\BLL.pdb
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\bin\Debug\BLL.dll.config
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\bin\Debug\BLL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\bin\Debug\BLL.pdb
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\bin\Debug\DAL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\bin\Debug\EntityFramework.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\bin\Debug\DAL.pdb
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\bin\Debug\DAL.dll.config
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\bin\Debug\EntityFramework.xml
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\obj\Debug\BLL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\BLL\obj\Debug\BLL.pdb

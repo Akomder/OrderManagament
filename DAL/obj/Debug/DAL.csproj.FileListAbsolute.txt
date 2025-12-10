@@ -1,0 +1,36 @@
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\DAL\bin\Debug\DAL.dll.config
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\DAL\bin\Debug\DAL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\DAL\bin\Debug\DAL.pdb
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\DAL\bin\Debug\EntityFramework.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\DAL\bin\Debug\EntityFramework.xml
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\DAL\obj\Debug\DAL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\OrderManagementApp\Exer1\OrderManagament\DAL\obj\Debug\DAL.pdb
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\DAL\bin\Debug\DAL.dll.config
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\DAL\bin\Debug\DAL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\DAL\bin\Debug\DAL.pdb
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\DAL\bin\Debug\EntityFramework.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\DAL\bin\Debug\EntityFramework.xml
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\DAL\obj\Debug\DAL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\Exer1\OrderManagament\DAL\obj\Debug\DAL.pdb
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\DAL\bin\Debug\DAL.dll.config
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\DAL\bin\Debug\DAL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\DAL\bin\Debug\DAL.pdb
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\DAL\bin\Debug\EntityFramework.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\DAL\bin\Debug\EntityFramework.xml
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\DAL\obj\Debug\DAL.dll
+C:\Users\souka\OneDrive\Desktop\TDTU\Semester 5\Software Engineering\Assignment 2\OrderManagament\DAL\obj\Debug\DAL.pdb
