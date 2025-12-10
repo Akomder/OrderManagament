@@ -95,6 +95,7 @@ namespace OrderManagementWeb.Controllers
 
         // POST: Product/Delete/5
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
         {
             try
