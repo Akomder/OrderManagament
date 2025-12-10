@@ -1,0 +1,71 @@
+/* Custom styles for Order Management System */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+.footer {
+    border-top: 1px solid #dee2e6;
+}
+
+.table th {
+    font-weight: 600;
+}
+
+.btn {
+    font-weight: 500;
+}
+
+/* Dashboard cards */
+.card.text-white .opacity-50 {
+    opacity: 0.5;
+}
+
+/* Order details table */
+#orderDetailsTable input[type="number"] {
+    text-align: right;
+}
+
+#orderDetailsTable select {
+    max-width: 100%;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .navbar, .footer, .btn, .alert {
+        display: none;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+    
+    .btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+    }
+}
